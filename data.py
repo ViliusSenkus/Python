@@ -1,93 +1,119 @@
-# #*******************************************************************#
-# #*******************PYTHON*MOKOMASIS*FAILAS*************************#
-# #*******************************************************************#
+#*******************************************************************#
+#****************** PYTHON MOKOMASIS FAILAS ************************#
+#*******************************************************************#
 
 
-# # Komentaras
+# Komentaras
 
 
-# # STRINGAI
+# STRINGAI
 
-# #standart output:
-# print('Line 12. Standart output with one parameter')
-# print('Line 13 Standart output with first paramerter,','and second parameter conected with , symbol')
-# print('Line 14 with three different parameters (this string, integer, and special characters requering escape symbol \)', 5, '\"a\"')
+#standart output:
+print('Line 12. Standart output with one parameter')
+print('Line 13 Standart output with first paramerter,','and second parameter conected with , symbol')
+print('Line 14 with three different parameters (this string, integer, and special characters requering escape symbol \)', 5, '\"a\"')
 
-# #separator
-#       # išvedant informaciją tarp parametrų paliekamas tarpas - separatorius.
-#       # defaultinis parametras - print(sep=" ")
-#       # Separatoriaus pakeitimas:
-# print('Line 20. Separator example. use | as an separator beatween two parameters', 2, sep="|")
+#separator
+      # išvedant informaciją tarp parametrų paliekamas tarpas - separatorius.
+      # defaultinis parametras - print(sep=" ")
+      # Separatoriaus pakeitimas:
+print('Line 20. Separator example. use | as an separator beatween two parameters', 2, sep="|")
 
-# #end of string
-#       # defaultinis eilutės galo nustatymas - print(end="\n")
-#       # Eilutės galo pakeitimas:
-# print('Line25. Line end example', end="---") # simbolių gali būti betkiek, pvz.:end=("-!\n")
-# print('Second line of Line end example')
+#end of string
+      # defaultinis eilutės galo nustatymas - print(end="\n")
+      # Eilutės galo pakeitimas:
+print('Line25. Line end example', end="---") # simbolių gali būti betkiek, pvz.:end=("-!\n")
+print('Second line of Line end example')
 
-# #darbas su skaičiais kaip tekstu
-# print('Line 29. integers converting to string example' + str(7)) #skaičiaus konvertaviams į tekstą
-# print('Line 30. text multiplication example' * 2)      #teksto kartojimas n kartų
+#darbas su skaičiais kaip tekstu
+print('Line 29. integers converting to string example' + str(7)) #skaičiaus konvertaviams į tekstą
+print('Line 30. text multiplication example' * 2)      #teksto kartojimas n kartų
 
-# # matematiniai veiksmai eilutėje
-# print('Line 33-36. integers math examples: 5+5, 5**2, 5//3')
-# print(5+5)
-# print(5**2) #kelia kvadratu
-# print(5//3) #dalina iki sveiko skaiciaus
-# print('Line 37. Different Math functions print examples (min, max ...)', min(1,2,3,4), max(1,2,3,4), abs(-5), pow(5, 3), round(8/3))
-# print('Line 38. string to int converting example', 7+int('4')) # teksto konvertavimas į skaičių
-
-
-# #INPUT
-
-# #standart input
-# input('Line 44-45Standard request input with explanation text. Next request without explanation text')
-# input()
-# kintamasis = input('Line 46. Input with value assignment to variable.')  #inputas visada string'as.
-#                       # Pakeisti galima taip:
-# kintamasis=int(input('Line 48. Input as int example.'))
+# matematiniai veiksmai eilutėje
+print('Line 33-36. integers math examples: 5+5, 5**2, 5//3')
+print(5+5)
+print(5**2) #kelia kvadratu
+print(5//3) #dalina iki sveiko skaiciaus
+print('Line 37. Different Math functions print examples (min, max ...)', min(1,2,3,4), max(1,2,3,4), abs(-5), pow(5, 3), round(8/3))
+print('Line 38. string to int converting example', 7+int('4')) # teksto konvertavimas į skaičių
 
 
-# # KINTAMIEJI
+#INPUT
 
-# pavadinimas = 'reiksme' #string
-# kablelis = 4.5456       #int, float
-#                         #bool
+#standart input
+input('Line 44-45Standard request input with explanation text. Next request without explanation text')
+input()
+kintamasis = input('Line 46. Input with value assignment to variable.')  #inputas visada string'as.
+                      # Pakeisti galima taip:
+kintamasis=int(input('Line 48. Input as int example.'))
 
-# #kintamojo panaikinimas:
-# del pavadinimas
+
+# KINTAMIEJI
+
+pavadinimas = 'reiksme' #string
+kablelis = 4.5456       #int, float
+                        #bool
+
+#kintamojo panaikinimas:
+del pavadinimas
 
 
-# #CONDITIONALL PROGRAMMING
+#STRING funkcijos/metodai
 
-# # general case
-# if 5==5:
-#   print('Line 65. General if case demo. Just checked if 5 equal to 5')
+eilute = "string"
+eilute[4]           #gražina 4 eilutės simbolį
+eilute[2:4]         #gražina eilutės elementus pradedant nuo 2 ir baigiant neįskaitytinai 4.
+eilute[4:]          #gražina eilutės elementus pradedant nuo 4.
+eilute[1:6:2]       #gražina eilutės elementus pradedant nuo 1 ir biagiant 6(neįskaitytinai), kas 2 elementus.
+eilute[::2]         #gražina eilutės elementus kas 2 elementus. Galima ir minusinė reikšmė
+len(eilute)         #gražina eilutės simbolių skaičių - eilutės ilgį
+eilute.count('s')   #gražina skaičių nurodantį kiek atitinkamų elementų yra kintamajame eilutė
+eilute.upper()      #pakeičia visas raides į didžiąsas
+eilute.lower()      #pakeičia visas raides į mažąsias
+eilute.isupper()    #true/false ar visos raidės yra didžiosios
+eilute.islower()    #true/false ar visos raidės yra mažiosios
+eilute.capitalize() #pakeičia eilutės pirmą simbolį į didžiąją raidę, o kitas į mažąsias
+eilute.find('ri')   #gražina atrasto fragmento pirmo atitinkamo simbolio eilės numerį. (2)
+eilute.split(',')   #suskaido eilutę į masyvą pagal nurodytą elementą
+arr=[]
+", ".joint('arr')   #sujungia masyvo 'arr' elementus į eilutę, per nurodytą simbolį - ', '
+", ".joint('arr')   #
 
-# # if in if
-# if 5==5:
-#   print('Line 69-71. If in if demo. First if is correct')
-#   if 7==7:
-#     print('second if is correct')
 
-# # else if
-# teisybe = True        
-# if not teisybe:
-#   print('Line 74-80. Else if demo. You see this if ture is false.')
-# elif teisybe == 4:
-#   print('else if demo. You see this if ture is equal to 4.')
-# else:
-#   print('else if demo. You see this if ture is true.')
 
-# #ternar operator
-# data = input('Line 83-84. Teenar operator demo. Iveskite skaiciu žodžiais ')
-# number = 5 if data == 'five' else 0
 
-# #logical operators and/or
-# if 7==7 and 6==6 or 4==4:
-#   print('Line 88. Demo of logical operators or/and ')
 
-# #CIKLAI
+
+#CONDITIONALL PROGRAMMING
+
+# general case
+if 5==5:
+  print('Line 65. General if case demo. Just checked if 5 equal to 5')
+
+# if in if
+if 5==5:
+  print('Line 69-71. If in if demo. First if is correct')
+  if 7==7:
+    print('second if is correct')
+
+# else if
+teisybe = True        
+if not teisybe:
+  print('Line 74-80. Else if demo. You see this if ture is false.')
+elif teisybe == 4:
+  print('else if demo. You see this if ture is equal to 4.')
+else:
+  print('else if demo. You see this if ture is true.')
+
+#ternar operator
+data = input('Line 83-84. Teenar operator demo. Iveskite skaiciu žodžiais ')
+number = 5 if data == 'five' else 0
+
+#logical operators and/or
+if 7==7 and 6==6 or 4==4:
+  print('Line 88. Demo of logical operators or/and ')
+
+#CIKLAI
 
 #for
 for i in range(6):  #nurodant iteracijų skaičių
@@ -151,3 +177,49 @@ arr.count(2)  #skaičiuoja kiek masyve yra nurodytų elementų. šiuo atveju kie
               #jeigu atitikmenų nėra gražina 0
 len(arr) #skaičiuoja pirmo lygmens masyvo elementų skaičių        
 
+
+#SĄRAŠAI---KORTEŽAI --- TUPLE
+  #negalima keisti reikšmės
+data1 = (1,2,3)
+data2 = 4,5,6
+data1[1]
+data2[1]
+tuple(arr) #pakeičia masyvą į tuple
+tuple(eilute) #pakeičia eilutę į eilutės simbolių tuple
+
+
+#ŽODYNAI --- DICTIONARY
+data = {'key': 'value', 3: 55}
+data['key']
+data.get('key')
+dict(key='value', next='value2') #key visada eilutė
+
+data.items()  #gražina sąrašą kaip keikvieno key ir value tuplas, masyve patalpintame į tuple
+print(data.items())
+
+for key, value in data.items():
+  print(key, ' : ', value )
+
+data.keys()     #gražina raktų masyvą patalpintą į tuple
+data.values()   #gražina reikšmių masyvą patalpintą į tuple
+
+data.clear()
+data.pop(3)     #išmeta reikšmę, kurios key yra 3
+data.popitem()  #išmeta paskutinę reikšmę
+
+
+#SET
+  #reikšmių sąrašas su nesikartojančiais ir išrikiuotais elementais
+set('llllabas') #sukuria elementą/žodyną/objektą su nepasikartojančiom reikšmėm ('l','a','b','s')
+data = {1,2,3,4,4,5}
+data.add(12)
+data.update(12,13,14)
+data.remove(13)
+data.pop() #panaikina pirmą elementą
+data.clear()
+
+#frozen set
+  #frozen set = tuple + set
+frozenset([2,3,4])
+
+#FUNCTIONS
